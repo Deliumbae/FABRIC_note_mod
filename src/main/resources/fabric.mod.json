@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "note_mod",
+	"version": "${version}",
+	"name": "note_mod",
+	"description": "Note mod to write some texts in a notebook",
+	"authors": [
+		"doliv"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/note_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.doliv.note_mod.Note_mod"
+		],
+		"fabric-datagen": [
+			"net.doliv.note_mod.Note_modDataGenerator"
+		],
+		"client": [
+			"net.doliv.note_mod.Note_modClient"
+		]
+	},
+	"mixins": [
+		"note_mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
